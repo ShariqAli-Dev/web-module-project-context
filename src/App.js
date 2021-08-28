@@ -8,7 +8,7 @@ import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
 function App() {
-  const [products, setProdcuts] = useState(data);
+  const [products] = useState(data);
   const [cart, setCart] = useState([]);
 
   const addItem = (item) => {
@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <ProductContext.Provider value={{ products, addItem }}>
+    <ProductContext.Provider value={{ products, addItem, cart }}>
       <div className='App'>
         <Navigation />
 
